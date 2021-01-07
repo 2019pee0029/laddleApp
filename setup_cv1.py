@@ -43,7 +43,7 @@ log.info("loaded all models")
 class VideoCamera(object):
     def __init__(self):
         self.video = cv.VideoCapture(
-            'rtsp://172.24.136.242:554/cam/realmonitor?channel=1&subtype=1&unicast=true&proto=Onvif')
+            'rtsp://150.0.147.105/cam/realmonitor?channel=1&subtype=1&unicast=true&proto=Onvif')  #172.24.136.242:554
         #self.video = cv.VideoCapture('D:\\AI DS Projects\\rec_17_30.avi')
         (self.grabbed, self.frame) = self.video.read()
         threading.Thread(target=self.update, args=()).start()
